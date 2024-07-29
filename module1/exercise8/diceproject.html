@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.5" />
+    <title>Dice Generator</title>
+    <link rel="stylesheet" href="diceproject.css" />
+  </head>
+  <body>
+    <div id="dice-center">
+      <h1>The Dice Generator!</h1>
+    </div>
+    <div class="dice-main">
+      <div class="dice-selection"></div>
+      <div id="dice-container"></div>
+      <label>Choose a dice:</label>
+      <select id="dice-type">
+        <option value="6">D6</option>
+        <option value="10">D10</option>
+        <option value="20">D20</option>
+      </select>
+      <div class="dice-roll">
+        <button id="roll-button">Roll The Dice!</button>
+      </div>
+      <div class="result">
+        <p>Result: <span id="roll=result"></span></p>
+      </div>
+    </div>
+    <footer>
+      <p>Created by Jake</p>
+      <script src="diceproject.js"></script>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+body{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url("casinobackgoundimage.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column;
+    
+    
+}
+
+#dice-center {
+    background-color: #181717ca;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  border: 1px solid #3d3b3b;
+}
+
+header {
+    background-color: #919191;
+    color: white;
+    padding: 1em 0;
+}
+
+#dice-main{
+    margin: 20px 0;
+}
+
+
+.dice-selection,
+.dice-roll,
+.result {
+    margin: 1em 0;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
