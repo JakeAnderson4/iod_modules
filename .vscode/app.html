@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .movie-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .movie-header img {
+            width: 150px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .movie-header .title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .movie-details {
+            margin-top: 20px;
+        }
+        .movie-details h3 {
+            margin-top: 0;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .movie-details p {
+            margin: 5px 0;
+        }
+        .rating {
+            background-color: #ffcc00;
+            border-radius: 4px;
+            padding: 5px 10px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="movie-header">
+            <img src="https://via.placeholder.com/150" alt="Movie Poster" id="movie-poster">
+            <div>
+                <div class="title" id="movie-title">Movie Title</div>
+                <div class="rating" id="movie-rating">PG-13</div>
+            </div>
+        </div>
+        <div class="movie-details">
+            <h3>Plot</h3>
+            <p id="movie-plot">This is where the plot of the movie will be displayed. It gives a brief summary of the storyline.</p>
+            <h3>Details</h3>
+            <p><strong>Director:</strong> <span id="movie-director">Director Name</span></p>
+            <p><strong>Writer:</strong> <span id="movie-writer">Writer Name</span></p>
+            <p><strong>Actors:</strong> <span id="movie-actors">Actor Names</span></p>
+            <p><strong>Genre:</strong> <span id="movie-genre">Genre List</span></p>
+            <p><strong>Released:</strong> <span id="movie-released">Release Date</span></p>
+            <p><strong>Runtime:</strong> <span id="movie-runtime">Movie Runtime</span></p>
+            <p><strong>Awards:</strong> <span id="movie-awards">Award List</span></p>
+        </div>
+        <a href="#" class="button">More Information</a>
+    </div>
+
+    <script>
+        const apiKey = 'your_api_key'; // Replace with your OMDb API key
+
+// Function to fetch movies by keyword
+function fetchMovies(keyword) {
+    const apiUrl = `https://www.omdbapi.com/?s=${keyword}&apikey=${apiKey}`;
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            if (data.Response === "True") {
+                displayMovies(data.Search);
+            } else {
+                alert('No movies found.');
+                document.getElementById('movies-container').innerHTML = '<p>No movies found.</p>';
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+}
+
+// Function to display movies
+function displayMovies(movies) {
+    const moviesContainer = document.getElementById('movies-container');
+    moviesContainer.innerHTML = ''; // Clear previous results
+    movies.forEach(movie => {
+                const movieCard = `
+                    <div class="movie-card">
+                        <img src="${movie.Poster}" alt="${movie.Title}">
+                        <div>
+                            <div class="title">${movie.Title}</div>
+                            <div class="rating">${movie.Year}</div>
+                            <div class="movie-details">
+                                <h3>Details</h3>
+                                <p><strong>Type:</strong> ${movie.Type}</p>
+                                <p><strong>Year:</strong> ${movie.Year}</p>
+                            </div>
+                            <a href="#" class="button">More Information</a>
+                        </div>
+                    </div>
+                `;
+                moviesContainer.innerHTML += movieCard;
+            });
+        }
+
+        // Populate the template with the movie data
+        document.getElementById('movie-title').innerText = movieData.title;
+        document.getElementById('movie-poster').src = movieData.poster;
+        document.getElementById('movie-rating').innerText = movieData.rating;
+        document.getElementById('movie-plot').innerText = movieData.plot;
+        document.getElementById('movie-director').innerText = movieData.director;
+        document.getElementById('movie-writer').innerText = movieData.writer;
+        document.getElementById('movie-actors').innerText = movieData.actors;
+        document.getElementById('movie-genre').innerText = movieData.genre;
+        document.getElementById('movie-released').innerText = movieData.released;
+        document.getElementById('movie-runtime').innerText = movieData.runtime;
+        document.getElementById('movie-awards').innerText = movieData.awards;
+    </script>
+</body>
+</html>
