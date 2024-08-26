@@ -1,0 +1,18 @@
+
+    body{
+        background-color: red;
+        background-image: url("https://scontent.fper8-1.fna.fbcdn.net/v/t39.30808-6/406183630_359695659905360_784179548008062419_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MGWEt68rYdkQ7kNvgEc2gRP&_nc_ht=scontent.fper8-1.fna&oh=00_AYDyqoiwKckxmBRyBrwAhffZzoPWzc4qVn5uF727aa3I0g&oe=66CF48E5");
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+    
+    banner{
+        background-size: auto;
+        
+    }
+
+    header{
+        top: 0px;
+    }
+

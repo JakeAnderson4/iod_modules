@@ -35,9 +35,11 @@ objects are more structured (as a table of contents)
 arrays stores more than one value in a single variable, and they are like a shopping list
 
 
+A database is an organised collection of structured information in a computer system. 
+data is most commonly used with rows and columns to make processing and data querying efficient.
+The data can then be accessed, managed, modified, updated, controlled and organised.
 
-
-
+research entity's 
 
 
 */
