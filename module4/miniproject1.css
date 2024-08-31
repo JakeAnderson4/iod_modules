@@ -1,14 +1,54 @@
 
     body{
-        background-color: red;
+        background-color:red;
         background-image: url("https://scontent.fper8-1.fna.fbcdn.net/v/t39.30808-6/406183630_359695659905360_784179548008062419_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MGWEt68rYdkQ7kNvgEc2gRP&_nc_ht=scontent.fper8-1.fna&oh=00_AYDyqoiwKckxmBRyBrwAhffZzoPWzc4qVn5uF727aa3I0g&oe=66CF48E5");
         background-size: cover;
         background-attachment: fixed;
+        padding: 20px;
+       
         
     }
     
-    banner{
+    h1{
+        background-color: red;
+        padding: 20px;
+        text-align: center;
+        opacity: 80%;
+        
+    }
+
+    .navbar ul{
+        list-style-type: none;
+        overflow: hidden;
+        padding: 05px;
+        margin: 0px;
+        white-space: nowrap;
+        
+        
+    }
+    
+    .navbar a{
+        color: white;
+        text-decoration: none;
+        background-color: rgb(68, 68, 68);
+        text-align: center;
+        display:inline-block;
+        padding: 40px;
+        margin: 0px;
+        
+       
+    }
+
+    .navbar a:hover{
+        background-color: darkgrey;
+    }
+
+
+    
+    #banner{
         background-size: auto;
+        width: 1011px;
+        padding-top: 5px;
         
     }
 
@@ -16,3 +56,33 @@
         top: 0px;
     }
 
+    #content_text{
+        border: 1px solid;
+
+    }
+
+    #logo{
+       width: 200px;
+       
+    }
+
+    #content_text{
+        background-color: red;
+        opacity: 80%;
+        width: 1000px;
+        padding: 5px;
+
+        
+    }
+
+    #navbar{
+       
+        text-decoration: none;
+        padding: 15px;
+        background-color:whitesmoke;
+    }
+
+    .navbar li{
+        float: left;
+    }
+    
